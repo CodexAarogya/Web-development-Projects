@@ -1,0 +1,314 @@
+ /* ---------------------------FONTS----------------------------------- */
+ @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Satisfy&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ /* CSS FOR BODY */
+ body {
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /* MAIN LOGIN PARENT CONTAINER */
+ .login-container {
+     width: 60vw;
+     height: 90vh;
+     display: grid;
+     justify-content: center;
+     grid-template-columns: 1.5fr 2fr;
+     grid-template-rows: repeat(2, minmax(100px, 1fr));
+ }
+
+ /* SIDE-ILLUSTRATION 
+ / SECTION-1*/
+ .side-illustration {
+     grid-row: 1/3;
+     background-image: url("/LoginForm/images/BEAUTIFUL-WALLPAPER-5032023.webp");
+ }
+
+ /* LOGIN SECTION-2 */
+ .login-text-area {
+     background-color: rgb(240, 240, 240);
+     grid-row: 1/3;
+     display: grid;
+     text-align: center;
+     grid-template-rows: 0.5fr 2fr;
+     gap: 20px;
+ }
+
+ /* TOP-MOST-LOGIN-TEXT */
+ .inside-text-area-section-1 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* font-family: "Satisfy", cursive; */
+     font-family: "Playwrite GB S", cursive;
+     font-size: large;
+     color: #022F40, #38AECC;
+ }
+
+ /* USER-INPUT-PARENT-CONTAINER */
+ .input-box {
+     display: grid;
+     align-items: center;
+     height: 15vh;
+ }
+
+ /* USERNAME AND PASSWORD INPUTS */
+ .input-box input {
+     text-align: center;
+     width: 300px;
+     height: 40px;
+     border-radius: 10px 10px 10px 10px;
+     margin: 0px;
+     box-sizing: border-box;
+     cursor: pointer;
+     border: none;
+     outline: none;
+     background-color: rgb(208, 208, 208);
+     box-shadow: rgb(255, 255, 255) 0px 2px 5px inset;
+ }
+
+ /* SIDE-ICONS-IN-INPUTS */
+ .input-box img {
+     width: 16px;
+     height: 15px;
+     position: absolute;
+     transform: translateY(12px) translateX(5px);
+ }
+
+ /* REMEMBER AND FORGOT PASSWORD SECTION CONTAINER */
+ .remember {
+     display: flex;
+     justify-content: space-between;
+     color: #45b08c;
+     font-family: "Poppins", sans-serif;
+     font-size: 80%;
+ }
+
+ .remember a {
+     text-decoration: none;
+     color: #45b08c;
+     font-family: "Poppins", sans-serif;
+ }
+
+ .remember a:hover {
+     text-decoration: underline;
+     color: #043927;
+ }
+
+ /* LOGIN-BUTTON-AREA */
+ .login-button {
+     display: flex;
+     justify-content: center;
+ }
+
+ .login-button input {
+     height: 40px;
+     width: 100px;
+     margin-top: 30px;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     background-image: radial-gradient(circle 1292px at -13.6% 51.7%, rgba(0, 56, 68, 1) 0%, rgba(163, 217, 185, 1) 51.5%, rgba(255, 252, 247, 1) 88.6%);
+     color: #f5f5f5;
+     border-radius: 10px;
+     font-family: "Poppins", sans-serif;
+ }
+
+ .login-button input:hover {
+     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 229, 208, 1) 42%, rgba(92, 202, 238, 0.41) 93.6%);
+     color: black;
+ }
+
+ /* NEW-ACCOUNT */
+ .additionals {
+     display: flex;
+     margin-top: 50px;
+     justify-content: center;
+ }
+
+ .additionals a {
+     text-decoration: none;
+     color: #45b08c;
+     font-family: "Poppins", sans-serif;
+ }
+
+ .additionals a:hover {
+     color: #043927;
+     text-decoration: underline;
+ }
+
+ /* -----------------------------------------------------------MEDIA QUERIES --------------------------------------------------------*/
+ @media only screen and (max-width:480px) {
+
+     .login-text-area {
+         width: 95vw;
+         height: 100vh;
+     }
+
+     .login-container {
+         grid-template-columns: none;
+     }
+
+     .inside-text-area-section-1 {
+         font-size: medium;
+     }
+
+     .input-box input {
+         width: 285px;
+     }
+
+     .remember {
+         font-size: small;
+     }
+
+     .additionals {
+         font-size: small;
+     }
+
+ }
+
+ @media only screen and (min-width: 481px) and (max-width: 600px) {
+
+     .login-container {
+         width: 95vw;
+         height: 100vh;
+         grid-template-columns: 1fr 1fr;
+     }
+
+     .input-box input {
+         width: 180px;
+     }
+
+ }
+
+ @media only screen and (min-width: 600px) and (max-width: 768px) {
+
+     .login-container {
+         width: 95vw;
+         height: 100vh;
+         grid-template-columns: 1fr 1fr;
+     }
+
+     .input-box input {
+         width: 240px;
+     }
+
+ }
+
+ @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+     .login-container {
+         width: 95vw;
+         height: 100vh;
+         grid-template-columns: 1.5fr 2fr;
+     }
+
+     .input-box input {
+         width: 370px;
+     }
+
+     .remember {
+         justify-content: space-around;
+     }
+
+ }
+
+ @media only screen and (min-width: 1200px) {
+     .input-box input {
+         width: 365px;
+     }
+
+     .remember {
+         justify-content: space-around;
+     }
+
+     .login-button input {
+         width: 150px;
+     }
+ }
+
+ @media only screen and (min-width: 1900px) {
+     .input-box input {
+         width: 500px;
+     }
+
+     .remember {
+         justify-content: space-around;
+     }
+
+     .login-button input {
+         width: 150px;
+     }
+
+     .login-container {
+         width: 60vw;
+         height: 80vh;
+     }
+
+     .inside-text-area-section-1 {
+         font-size: large;
+     }
+
+     .remember {
+         font-size: medium;
+         font-weight: bold
+     }
+
+     .login-button input {
+         width: 300px;
+     }
+ }
+
+ @media only screen and (min-width: 2500px) {
+     .input-box input {
+         width: 800px;
+         height: 50px;
+     }
+
+     .remember {
+         justify-content: space-around;
+     }
+
+     .login-button input {
+         width: 150px;
+     }
+
+     .login-container {
+         width: 60vw;
+         height: 80vh;
+     }
+
+     .inside-text-area-section-1 {
+         font-size: large;
+     }
+
+     .remember {
+         font-size: 20px;
+         font-weight: normal;
+     }
+
+     .login-button input {
+         width: 300px;
+     }
+
+     .additionals a {
+         font-size: 20px;
+     }
+
+     .login-button input {
+         width: 350px;
+         height: 55px;
+         font-size: medium;
+     }
+ }
+
+ /* -----------------------------------------------------------MEDIA QUERIES END--------------------------------------------------------*/
