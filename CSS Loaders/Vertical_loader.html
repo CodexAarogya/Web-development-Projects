@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(171, 171, 78, 0.334);
+    }
+    .loader{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 200px;
+        height: 100px;
+        rotate: 180deg;
+        column-gap: 5px;
+    }
+    .col1{
+        background-color: black;
+        animation: increment_1 1s linear infinite;
+        animation-duration: 500ms;
+    }
+    .col2{
+        background-color: black;
+        animation: increment_2 1s linear infinite;
+        animation-duration: 450ms;
+    }
+    .col3{
+        background-color: black;
+        animation: increment_3 1s linear infinite;
+        animation-duration: 400ms;
+    }
+    @keyframes increment_1{
+        from{
+            height: 0%;
+        }
+        to{
+            height: 100%;
+        }
+    }
+    @keyframes increment_2{
+        from{
+            height: 0%;
+        }
+        to{
+            height: 100%;
+        }
+    }
+    @keyframes increment_3{
+        from{
+            height: 0%;
+        }
+        to{
+            height: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="loader">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+    </div>
+    
+</body>
+</html>
